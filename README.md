@@ -48,21 +48,21 @@ THEN I can click on the concert's link to purchase tickets
 
 <a href="https://github.com/tomaspz">
          <img alt="Tomás-Pérez-Zafón" src="assets/images/Tomás-Pérez-Zafón.png"
-         width="150" height="150" style="border-radius:50%;">
+         width="100" height="100" style="border-radius:50%;">
       </a>
 
 <a href="https://github.com/Eshi44">
          <img alt="Emerald Hamel-Iervolino" src="assets/images/Emerald-Hamel-Iervolino.jpg"
-         width="150" height="150" style="border-radius:50%;">
+         width="100" height="100" style="border-radius:50%;">
       </a>
 
 <a href="https://github.com/bkim377">
          <img alt="Brandon Kim" src="assets/images/Brandon-Kim.png"
-         width="150" height="150" style="border-radius:50%;">
+         width="100" height="100" style="border-radius:50%;">
       </a>
 
 <a href="https://github.com/noobatl">
          <img alt="JJ Villacres" src="assets/images/JJ-Villacres.png"
-         width="150" height="150" style="border-radius:50%;">
+         width="100" height="100" style="border-radius:50%;">
       </a>
 
