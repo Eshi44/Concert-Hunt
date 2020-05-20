@@ -47,7 +47,7 @@ THEN I can click on the concert's link to purchase tickets
 # Contributors
 
 <a href="https://github.com/tomaspz">
-         <img alt="Tomás-Pérez-Zafón" src="assets/images/Tomás Pérez-Zafón.png"
+         <img alt="Tomás-Pérez-Zafón" src="assets/images/Tomás-Pérez-Zafón.png"
          width="150" height="150" style="border-radius:50%">
       </a>
 
@@ -63,6 +63,6 @@ THEN I can click on the concert's link to purchase tickets
 
 <a href="https://github.com/noobatl">
          <img alt="JJ Villacres" src="assets/images/JJ-Villacres.png"
-         width="150" height="150" style="border-radius:50%">
+         width="150" height="150" style="border-radius:9999px">
       </a>
 
