@@ -1,376 +1,101 @@
 <!DOCTYPE html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Concert Hunt</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css"
-      integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg=="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Faster+One|Orbitron:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <nav class="top-bar foundation-5-top-bar">
-      <header class="top-bar-title">
-        <h1 onclick="location.reload()"><i class="fas fa-icons"></i>
-        CONCERT HUNT</h1>
-      </header>
-      <div id="responsive-menu">
-        <div class="top-bar-left">
-          <ul
-            class="dropdown vertical medium-horizontal menu"
-            data-responsive-menu="drilldown medium-dropdown"
-            data-auto-height="true"
-            data-animate-height="true"
-          ></ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="menu">
-            <li>
-              <input type="text" placeholder="Artist Search" id="inputSearch" />
-            </li>
-            <li>
-              <button type="button" class="button radius" id="searchBtn">
-                Search
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="assets/images/concert-hunt-icon.ico" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Concert Hunt</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css"
+			integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg=="
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Faster+One|Orbitron:400,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<nav class="top-bar foundation-5-top-bar">
+			<header class="top-bar-title">
+				<h1 class="pointer" onclick="location.reload()">
+					<i class="fas fa-icons"></i> CONCERT HUNT
+				</h1>
+			</header>
+			<div id="responsive-menu">
+				<div class="top-bar-left">
+					<ul
+						class="dropdown vertical medium-horizontal menu"
+						data-responsive-menu="drilldown medium-dropdown"
+						data-auto-height="true"
+						data-animate-height="true"
+					></ul>
+				</div>
+				<div class="top-bar-right">
+					<ul class="menu" id="backgroundColor">
+						<li>
+							<input type="text" placeholder="Artist Search" id="inputSearch" />
+						</li>
+						<li>
+							<button type="button" class="button radius" id="searchBtn">
+								Search
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-    <main id="content">
-      <!-- <div class="container align-spaced align-center">
-      <div class="row medium-collapse large-uncollapse" id="results">
-        <div class="large-3 columns">
-          <div class="card">
-            <img
-              class="card-img"
-              src="https://placehold.it/200x200"
-              alt="header"
-            />
-            <div class="card-info">
-              <h1 class="card-title">Card Title</h1>
-              <div class="card-icon">Icon</div>
-              <p class="card-author">Genre</p>
-              <p class="card-stats">
-                6 <img src="https://placehold.it/20" alt="hi" /> 6
-                <img src="https://placehold.it/20" alt="hi" />
-              </p>
-            </div>
-          </div>
-        </div>
+		<main id="content"></main>
 
-        <div class="large-3 columns">
-          <div class="card">
-            <img
-              class="card-img"
-              src="https://placehold.it/200x200"
-              alt="header"
-            />
-            <div class="card-info">
-              <h1 class="card-title">Card Title</h1>
-              <div class="card-icon">Icon</div>
-              <p class="card-author">Genre</p>
-              <p class="card-stats">
-                6 <img src="https://placehold.it/20" alt="hi" /> 6
-                <img src="https://placehold.it/20" alt="hi" />
-              </p>
-            </div>
-          </div>
-        </div>
+		<footer id="footer">
+			<div class="grid-x grid-margin-y expanded footer">
+				<div class="medium-12 cell copyright">
+					<ul class="menu align-center">
+						<li class="menu-text">Copyright © 2020 Concert Hunt</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 
-        <div class="large-3 columns">
-          <div class="card">
-            <img
-              class="card-img"
-              src="https://placehold.it/200x200"
-              alt="header"
-            />
-            <div class="card-info">
-              <h1 class="card-title">Card Title</h1>
-              <div class="card-icon">Icon</div>
-              <p class="card-author">Genre</p>
-              <p class="card-stats">
-                6 <img src="https://placehold.it/20" alt="hi" /> 6
-                <img src="https://placehold.it/20" alt="hi" />
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="large-3 columns">
-          <div class="card">
-            <img
-              class="card-img"
-              src="https://placehold.it/200x200"
-              alt="header"
-            />
-            <div class="card-info">
-              <h1 class="card-title">Card Title</h1>
-              <div class="card-icon">Icon</div>
-              <p class="card-author">Genre</p>
-              <p class="card-stats">
-                6 <img src="https://placehold.it/20" alt="hi" /> 6
-                <img src="https://placehold.it/20" alt="hi" />
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-      <!-- <article class="grid-container" id="artist-search">
-      <h4 class="main-title">Top Artists</h4> -->
-      <!-- <div id="cards-group" class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-4"></div> -->
-    
-      <!-- </article> -->
-
-      <!-- <article class="grid-container" id="artist-details">
-      <div class="grid-x grid-margin-x">
-        <div class="medium-6 cell">
-          <img class="thumbnail" src="https://placehold.it/650x350" />
-          <div class="grid-x grid-padding-x small-up-4">
-            <div class="cell">
-              <img src="https://placehold.it/250x200" />
-            </div>
-            <div class="cell">
-              <img src="https://placehold.it/250x200" />
-            </div>
-            <div class="cell">
-              <img src="https://placehold.it/250x200" />
-            </div>
-            <div class="cell">
-              <img src="https://placehold.it/250x200" />
-            </div>
-          </div>
-        </div>
-
-        <div class="medium-6 large-5 cell large-offset-1">
-          <h3>Artist</h3>
-          <p id="artist-genre">Genre: Pop</p>
-          <p id="artist-info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-            expedita est cum eos, nihil eaque fugiat culpa, velit cumque
-            recusandae aperiam dolore doloremque magni quaerat deleniti ab
-            maxime distinctio nemo assumenda officiis! Dolore, repellendus
-            nobis. Quae a, excepturi adipisci explicabo laudantium ratione?
-            Illo, magnam aspernatur harum dolor consequatur voluptatem totam
-            similique itaque praesentium ab suscipit laudantium tenetur
-            consectetur beatae est quam. Magni cumque ratione, maiores similique
-            aliquid voluptatibus nostrum rerum inventore deserunt quaerat.
-            Debitis tenetur quaerat quod quae. Doloremque, cumque!
-          </p>
-
-          <a href="#" class="button large expanded">ConcertHunt</a>
-
-          <div class="small secondary expanded button-group">
-            <a class="button" id="facebook-button">Facebook</a>
-            <a class="button" id="twitter-button">Twitter</a>
-            <a class="button" id="yo-button">Yo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="tabs-section">
-        <hr />
-        <ul
-          class="tabs"
-          data-tabs=""
-          id="artist-tabs"
-          role="tablist"
-          data-e="kts49s-e"
-        >
-          <li class="tabs-title is-active" role="presentation">
-            <a
-              href="#review-panel"
-              aria-selected="false"
-              role="tab"
-              aria-controls="panel1"
-              id="review-panel-label"
-              tabindex="0"
-              >Reviews</a
-            >
-          </li>
-          <li class="tabs-title" role="presentation">
-            <a
-              href="#concert-panel"
-              role="tab"
-              aria-controls="panel2"
-              aria-selected="true"
-              id="concert-panel-label"
-              tabindex="-1"
-              >Concerts</a
-            >
-          </li>
-        </ul>
-        <div class="tabs-content" data-tabs-content="tabs">
-          <div
-            class="tabs-panel"
-            id="review-panel"
-            role="tabpanel"
-            aria-labelledby="panel1-label"
-          >
-            <h4>Reviews</h4>
-            <div class="media-object stack-for-small">
-              <div class="media-object-section">
-                <img class="thumbnail" src="https://placehold.it/200x200" />
-              </div>
-              <div class="media-object-section">
-                <h5>Artist Reviewer #1</h5>
-                <p>
-                  I'm going to improvise. Listen, there's something you should
-                  know about me... about inception. An idea is like a virus,
-                  resilient, highly contagious. The smallest seed of an idea can
-                  grow. It can grow to define or destroy you.
-                </p>
-              </div>
-            </div>
-            <div class="media-object stack-for-small">
-              <div class="media-object-section">
-                <img class="thumbnail" src="https://placehold.it/200x200" />
-              </div>
-              <div class="media-object-section">
-                <h5>Artist Reviewer #2</h5>
-                <p>
-                  I'm going to improvise. Listen, there's something you should
-                  know about me... about inception. An idea is like a virus,
-                  resilient, highly contagious. The smallest seed of an idea can
-                  grow. It can grow to define or destroy you
-                </p>
-              </div>
-            </div>
-            <div class="media-object stack-for-small">
-              <div class="media-object-section">
-                <img class="thumbnail" src="https://placehold.it/200x200" />
-              </div>
-              <div class="media-object-section">
-                <h5>Artist Reviewer #3</h5>
-                <p>
-                  I'm going to improvise. Listen, there's something you should
-                  know about me... about inception. An idea is like a virus,
-                  resilient, highly contagious. The smallest seed of an idea can
-                  grow. It can grow to define or destroy you
-                </p>
-              </div>
-            </div>
-            <label>
-              My Review
-              <textarea placeholder="None"></textarea>
-            </label>
-            <button class="button">Submit Review</button>
-          </div>
-          <div
-            class="tabs-panel is-active"
-            id="panel2"
-            role="concert-panel"
-            aria-labelledby="panel2-label"
-            aria-hidden="true"
-          >
-            <h4>Concerts</h4>
-            <div class="media-object stack-for-small">
-              <div class="media-object-section">
-                <img class="thumbnail" src="https://placehold.it/200x200" />
-              </div>
-              <div class="media-object-section">
-                <h5>Artist Concert #1</h5>
-                <p>
-                  I'm going to improvise. Listen, there's something you should
-                  know about me... about inception. An idea is like a virus,
-                  resilient, highly contagious. The smallest seed of an idea can
-                  grow. It can grow to define or destroy you.
-                </p>
-              </div>
-            </div>
-            <div class="media-object stack-for-small">
-              <div class="media-object-section">
-                <img class="thumbnail" src="https://placehold.it/200x200" />
-              </div>
-              <div class="media-object-section">
-                <h5>Artist Concert #2</h5>
-                <p>
-                  I'm going to improvise. Listen, there's something you should
-                  know about me... about inception. An idea is like a virus,
-                  resilient, highly contagious. The smallest seed of an idea can
-                  grow. It can grow to define or destroy you
-                </p>
-              </div>
-            </div>
-            <div class="media-object stack-for-small">
-              <div class="media-object-section">
-                <img class="thumbnail" src="https://placehold.it/200x200" />
-              </div>
-              <div class="media-object-section">
-                <h5>Artist Concert #3</h5>
-                <p>
-                  I'm going to improvise. Listen, there's something you should
-                  know about me... about inception. An idea is like a virus,
-                  resilient, highly contagious. The smallest seed of an idea can
-                  grow. It can grow to define or destroy you
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr />
-    </article> -->
-    </main>
-
-    <footer>
-      <div class="grid-x grid-margin-y expanded footer">
-        <div class="medium-12 cell copyright">
-          <ul class="menu align-center">
-            <li class="menu-text">Copyright © 2020 Concert Hunt</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/ip-geolocation-api-jquery-sdk@1.1.0/ipgeolocation.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/f53a49dc63.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/script.js"></script>
-  </body>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/ip-geolocation-api-jquery-sdk@1.1.0/ipgeolocation.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/f53a49dc63.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./assets/js/script.js"></script>
+	</body>
 </html>

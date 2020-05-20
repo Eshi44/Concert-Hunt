@@ -36,7 +36,7 @@ $(document).ready(function () {
 
   // FUNCTION TO CREATE THE HTML ARTIST CARD
   function createCardTopArtists(artist, image) {
-    return `<div class="cell" onclick="showTopAristInfo('${artist}');"><img class="thumbnail" src="${image}"/><h5 class="artist-name">${artist}</h5></a></div>`;
+    return `<div class="cell pointer" onclick="showTopAristInfo('${artist}');"><img class="thumbnail" src="${image}"/><h5 class="artist-name">${artist}</h5></a></div>`;
   }
 
   // EVENT LISTENER ON THE SEARCH BUTTON
